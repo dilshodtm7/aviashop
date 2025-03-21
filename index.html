@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Игровой портал</title>
+    <style>
+        @font-face {
+            font-family: 'Intro';
+            src: url('intro.otf') format('opentype');
+        }
+
+        body {
+            background: #000;
+            color: #fff;
+            font-family: 'Intro', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            padding-top: 60px;
+            user-select: none;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            z-index: 10;
+            width: 100%;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            font-family: 'Intro', Arial, sans-serif;
+            box-sizing: border-box;
+            font-size: 24px;
+        }
+
+        .tabcontent {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            flex-grow: 1;
+        }
+
+        .tabcontent.active {
+            display: flex;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            justify-content: space-around;
+        }
+
+        .game {
+            flex: 1 1 40%;
+            max-width: 209px;
+            margin: 10px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .game img {
+            width: 100%;
+            height: auto;
+            max-height: 200px;
+            max-width: 200px;
+            border-radius: 50px;
+            box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8),
+                        0px 0px 30px rgba(173, 216, 230, 0.6);
+        }
+
+        .game-info {
+            width: 100%;
+            margin-top: 10px;
+            font-family: 'Intro', Arial, sans-serif;
+        }
+
+        .game h3 {
+            font-size: 18px;
+            margin: 5px 0;
+        }
+
+        .game button {
+            font-size: 16px;
+            font-weight: bold;
+            padding: 12px 24px;
+            width: 130px;
+            border-radius: 25px;
+            background: linear-gradient(145deg, rgb(148, 78, 245) 0%, rgb(92, 36, 252) 100%);
+            box-shadow: 0 6px rgb(148, 78, 245), 0 -6px rgb(148, 78, 245) inset;
+            color: white;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            outline: none;
+            font-family: 'Intro', Arial, sans-serif;
+            border: none;
+        }
+
+        .game button:hover {
+            background: linear-gradient(145deg, #087f23 0%, #4CAF50 100%);
+            box-shadow: 0 8px #065f18, 0 -6px #4CAF50 inset;
+            transform: translateY(-3px);
+        }
+
+        .game button:active {
+            box-shadow: 0 3px #065f18, 0 -3px #4CAF50 inset;
+            transform: translateY(2px);
+        }
+
+        @media (max-width: 400px) {
+            .game {
+                flex: 0 1 48%;
+                max-width: 48%;
+                margin: 1% 1%;
+                padding-top: 10px;
+            }
+
+            .game img {
+                height: 140px;
+                width: auto;
+                max-width: 100%;
+                border-radius: 50px;
+                box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8),
+                            0px 0px 30px rgba(173, 216, 230, 0.6);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <span>@AVIASHOP_BOT</span>
+    </header>
+
+    <div id="Games" class="tabcontent active">
+        <div class="row">
+            <div class="game">
+                <img src="1.png" alt="Mines Preview">
+                <div class="game-info">
+                    <h3>Mines</h3>
+                    <a href="./mines/index.html"><button>Открыть</button></a>
+                </div>
+            </div>
+            <div class="game">
+                <img src="4.png" alt="Bombucks Preview">
+                <div class="game-info">
+                    <h3>Bombucks</h3>
+                    <a href="./bombucks/index.html"><button>Открыть</button></a>
+                </div>
+            </div>
+            <div class="game">
+                <img src="5.png" alt="Lucky jet Preview">
+                <div class="game-info">
+                    <h3>Lucky jet</h3>
+                    <a href="./lucky/index.html"><button>Открыть</button></a>
+                </div>
+            </div>
+            <div class="game">
+                <img src="2.png" alt="Royal Mines Preview">
+                <div class="game-info">
+                    <h3>Aviator</h3>
+                    <a href="./aviator/index.html"><button>Открыть</button></a>
+                </div>
+            </div>
+            <div class="game">
+                <img src="3.png" alt="BrawlPirates Preview">
+                <div class="game-info">
+                    <h3>Brawl Pirates</h3>
+                    <a href="./brawlpir/index.html"><button>Открыть</button></a>
+                </div>
+            </div>
+            <div class="game">
+                <img src="6.png" alt="New Game Preview">
+                <div class="game-info">
+                    <h3>Royal Mines</h3>
+                    <a href="./royal/index.html"><button>Open</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
